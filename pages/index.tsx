@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import { Flex, Button, Text, Heading, Image, Box } from "@chakra-ui/react";
-import { EmailIcon } from "@chakra-ui/icons";
-import Hadi_1 from "../public/images/Hadi_1.jpg";
 
 const Home: NextPage = () => {
+  const gradientYellow =
+    "linear(to-br, yellow.300 5%,yellow.600 25%,yellow.500 45%, yellow.700 55%, yellow.500 80%, yellow.700 90%)";
   return (
     <>
-      <Box bgGradient="linear(to-br, yellow.300 5%,yellow.600 25%,yellow.500 45%, yellow.700 55%, yellow.500 80%, yellow.700 90%)">
+      <Box bgColor="gray.800">
         <Box>
           <Flex
             justifyContent={"center"}
@@ -18,35 +18,19 @@ const Home: NextPage = () => {
             width="95%"
           >
             <Flex maxW="900px" w="100%" gap={10} justifyContent="end">
-              <Text
-                bgGradient="linear(to-br, yellow.300 5%,yellow.600 25%,yellow.500 45%, yellow.700 55%, yellow.500 80%, yellow.700 90%)"
-                bgClip="text"
-                fontWeight="bold"
-              >
+              <Text className="animate-background" bgClip="text" fontWeight="bold">
                 {" "}
                 About
               </Text>
-              <Text
-                bgGradient="linear(to-br, yellow.300 5%,yellow.600 25%,yellow.500 45%, yellow.700 55%, yellow.500 80%, yellow.700 90%)"
-                bgClip="text"
-                fontWeight="bold"
-              >
+              <Text className="animate-background" bgClip="text" fontWeight="bold">
                 {" "}
                 Experience
               </Text>
-              <Text
-                bgGradient="linear(to-br, yellow.300 5%,yellow.600 25%,yellow.500 45%, yellow.700 55%, yellow.500 80%, yellow.700 90%)"
-                bgClip="text"
-                fontWeight="bold"
-              >
+              <Text className="animate-background" bgClip="text" fontWeight="bold">
                 {" "}
                 Works
               </Text>
-              <Text
-                bgGradient="linear(to-br, yellow.300 5%,yellow.600 25%,yellow.500 45%, yellow.700 55%, yellow.500 80%, yellow.700 90%)"
-                bgClip="text"
-                fontWeight="bold"
-              >
+              <Text className="animate-background" bgClip="text" fontWeight="bold">
                 {" "}
                 Contacts
               </Text>
@@ -55,46 +39,196 @@ const Home: NextPage = () => {
           <Flex
             justifyContent={"center"}
             alignItems={"center"}
-            h={500}
             gap={10}
-            
             color="gray.800"
+            flexDirection="column"
           >
             <Flex
               justifyContent={"center"}
               alignItems={"center"}
-              h={500}
+              h={580}
               w="100%"
               gap={10}
+              className="animate-background"
+              flexDirection="column"
+              position="relative"
             >
-              <Image
-                borderRadius="full"
-                align="top"
-                src="/images/Hadi_1.jpg"
-                alt="Hadi Syahbal"
-                boxSize="200px"
-                objectFit="cover"
-                boxShadow="dark-lg"
-              />
-              <Flex
-                flexDirection="column"
-                alignItems="center"
-                color="white"
-                textShadow="0px 0px 10px black"
+
+              <Box
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    height: "150px",
+                    width: "100%",
+                    overflow: "hidden",
+                    display:"block",
+                  }}
               >
-                <Heading as="h1" size="lg">
-                  Abdul Hadi Syahbal
-                </Heading>
-                <Heading as="h2" size="2xl">
-                  Frontend Developer
-                </Heading>
-                <Heading as="h3" size="md" mt={5}>
-                  Currently working remotely
-                  <Box display="inline" ml={2} fontSize="23">
-                    ☕
-                  </Box>
-                </Heading>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1440 320"
+                    preserveAspectRatio="none"
+                    height="100%"
+                    width="100%"
+                >
+                  <path
+                      fill="#805AD5"
+                      fillOpacity="1"
+                      d="M0,288L48,282.7C96,277,192,267,288,234.7C384,203,480,149,576,117.3C672,85,768,75,864,101.3C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+                  >
+                    <animate
+                        repeatCount="indefinite"
+                        fill="#805AD5"
+                        attributeName="d"
+                        dur="10s"
+                        values="
+                M0,288L48,282.7C96,277,192,267,288,234.7C384,203,480,149,576,117.3C672,85,768,75,864,101.3C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z;
+
+                M0,96L48,122.7C96,149,192,203,288,192C384,181,480,107,576,69.3C672,32,768,32,864,74.7C960,117,1056,203,1152,234.7C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z;
+
+                M0,288L48,282.7C96,277,192,267,288,234.7C384,203,480,149,576,117.3C672,85,768,75,864,101.3C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z;">
+
+                    </animate>
+                  </path>
+                </svg>
+              </Box>
+              <Box
+                  style={{
+                    position: "absolute",
+                    top: "-15px",
+                    height: "150px",
+                    width: "100%",
+                    overflow: "hidden",
+                    display:"block",
+                  }}
+              >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1440 320"
+                    preserveAspectRatio="none"
+                    height="100%"
+                    width="100%"
+                >
+                  <path
+                      fill="rgb(26, 32, 44)"
+                      fillOpacity="1"
+                      d="M0,288L48,282.7C96,277,192,267,288,234.7C384,203,480,149,576,117.3C672,85,768,75,864,101.3C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+                  >
+                    <animate
+                        repeatCount="indefinite"
+                        fill="rgb(26, 32, 44)"
+                        attributeName="d"
+                        dur="20s"
+                        values="
+                M0,288L48,282.7C96,277,192,267,288,234.7C384,203,480,149,576,117.3C672,85,768,75,864,101.3C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z;
+
+                M0,96L48,122.7C96,149,192,203,288,192C384,181,480,107,576,69.3C672,32,768,32,864,74.7C960,117,1056,203,1152,234.7C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z;
+
+                M0,288L48,282.7C96,277,192,267,288,234.7C384,203,480,149,576,117.3C672,85,768,75,864,101.3C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z;">
+
+                    </animate>
+                  </path>
+                </svg>
+
+              </Box>
+              <Flex w="100%" flexDirection="row" alignItems="center" gap="80px" justifyContent="center">
+                <Image
+                  borderRadius="full"
+                  align="top"
+                  src="/images/Hadi_1.jpg"
+                  alt="Hadi Syahbal"
+                  boxSize="250px"
+                  objectFit="cover"
+                  boxShadow="dark-lg"
+                />
+                <Flex
+                  flexDirection="column"
+                  alignItems="left"
+                  color="white"
+                  textShadow="0px 0px 10px black"
+                  gap="20px"
+                >
+                  <Heading as="h1" size="lg" color="gray.700" textShadow="0px 0px 5px white">
+                    Frontend Developer
+                  </Heading>
+                  <Heading as="h2" size="3xl">
+                    Abdul Hadi Syahbal
+                  </Heading>
+                  <Heading as="h3" size="md" mt={0}>
+                    Currently working remotely
+                    <Box display="inline" ml={2} fontSize="23">
+                      ☕
+                    </Box>
+                  </Heading>
+                  <Flex gap="10px">
+                    <Button bgColor="gray.800">
+                      Resume
+                    </Button>
+                    <Button bgColor="gray.800">
+                      GitHub
+                    </Button>
+                    <Button bgColor="gray.800">
+                      LinkedIn
+                    </Button>
+                  </Flex>
+                </Flex>
               </Flex>
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1440 320"
+                  style={{ position: "absolute", bottom: "0px" }}
+                  preserveAspectRatio="none"
+                  height="100px"
+                  width="100%"
+              >
+                <path
+                    fill="#F6AD55"
+                    fillOpacity="1"
+                    d="M0,288L48,240C96,192,192,96,288,90.7C384,85,480,171,576,176C672,181,768,107,864,64C960,21,1056,11,1152,16C1248,21,1344,43,1392,53.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                >
+                  <animate
+                      repeatCount="indefinite"
+                      fill="#F6AD55"
+                      attributeName="d"
+                      dur="18s"
+                      values="
+                M0,288L48,240C96,192,192,96,288,90.7C384,85,480,171,576,176C672,181,768,107,864,64C960,21,1056,11,1152,16C1248,21,1344,43,1392,53.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+
+                M0,96L48,122.7C96,149,192,203,288,192C384,181,480,107,576,69.3C672,32,768,32,864,74.7C960,117,1056,203,1152,234.7C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+
+                M0,288L48,240C96,192,192,96,288,90.7C384,85,480,171,576,176C672,181,768,107,864,64C960,21,1056,11,1152,16C1248,21,1344,43,1392,53.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;">
+                  </animate>
+                </path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+                style={{ position: "absolute", bottom: "-10px" }}
+                preserveAspectRatio="none"
+                height="100px"
+                width="100%"
+              >
+                <path
+                  fill="rgb(26, 32, 44)"
+                  fillOpacity="1"
+                  d="M0,288L48,240C96,192,192,96,288,90.7C384,85,480,171,576,176C672,181,768,107,864,64C960,21,1056,11,1152,16C1248,21,1344,43,1392,53.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                >
+                  <animate
+                      repeatCount="indefinite"
+                      fill="rgb(26, 32, 44)"
+                      attributeName="d"
+                      dur="20s"
+                      values="
+                M0,288L48,240C96,192,192,96,288,90.7C384,85,480,171,576,176C672,181,768,107,864,64C960,21,1056,11,1152,16C1248,21,1344,43,1392,53.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+
+                M0,96L48,122.7C96,149,192,203,288,192C384,181,480,107,576,69.3C672,32,768,32,864,74.7C960,117,1056,203,1152,234.7C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+
+                M0,288L48,240C96,192,192,96,288,90.7C384,85,480,171,576,176C672,181,768,107,864,64C960,21,1056,11,1152,16C1248,21,1344,43,1392,53.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;">
+
+                  </animate>
+                </path>
+              </svg>
+
             </Flex>
           </Flex>
         </Box>
@@ -113,7 +247,7 @@ const Home: NextPage = () => {
             <Heading
               as="h1"
               size="3xl"
-              bgGradient="linear(to-br, yellow.300 5%,yellow.600 25%,yellow.500 45%, yellow.700 55%, yellow.500 80%, yellow.700 90%)"
+              className="animate-background"
               bgClip="text"
             >
               I Work with JavaScript a lot
